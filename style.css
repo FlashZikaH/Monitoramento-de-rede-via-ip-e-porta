@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     font-family: Arial;
-    color: #FFF;
+	color: #FFF;
 }
 
 body {
-    background: #111;
+    background: #1E90FF;
 }
 
 .center {
@@ -29,11 +29,12 @@ div.cards {
 
 div.card {
     display: flex;
+	background-color: #282A35;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
+    border: 5px solid;
     width: 180px;
-    height: 80px;
+	border-radius: 25px;
     margin-bottom: 20px;
 
 }
@@ -60,12 +61,13 @@ div.card div.status {
     text-align: center;
 }
 
-.online {
-    background: #07cc00;
-    color: #000;
+div.online {
+   border-color: green;
+   background: linear-gradient(0, green, #000000);
 }
 
-.offline {
-    background: #d10808;
-    color: #FFF;
+div.offline {
+	border-color: red;
+	background: linear-gradient(0, red, #000000);
+	animation: blink 1s steps(1, end) infinite;}@keyframes blink {  0% {    opacity: 1;  }  50% {    opacity: 0;  }  100% {    opacity: 1;  }
 }
